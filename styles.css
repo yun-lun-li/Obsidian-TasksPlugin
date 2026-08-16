@@ -500,6 +500,7 @@
 
 .frontmatter-kanban-card-title-wrap {
   display: flex;
+  width: 100%;
   min-width: 0;
   flex-direction: column;
   align-items: flex-start;
@@ -566,12 +567,19 @@
 }
 
 .frontmatter-kanban-card-title {
+  width: 100%;
   min-width: 0;
+  max-width: 100%;
   color: var(--fk-text-primary);
+  display: -webkit-box;
+  overflow: hidden;
   font-size: 1.25em;
   font-weight: 800;
   line-height: 1.18;
   overflow-wrap: anywhere;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
 }
 
 .frontmatter-kanban-card-title-line {
@@ -1914,6 +1922,10 @@
 .frontmatter-timeline-day-card .frontmatter-kanban-card-title {
   font-size: 15px;
   line-height: 1.18;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: unset;
 }
 
 .frontmatter-timeline-grid-card .frontmatter-kanban-card-title-wrap,
@@ -2822,6 +2834,10 @@
 .frontmatter-timeline-sidebar-card.is-compact .frontmatter-kanban-card-title {
   font-size: 14px;
   line-height: 1.18;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: unset;
 }
 
 .frontmatter-timeline-sidebar-card.is-compact .frontmatter-kanban-card-tags {
